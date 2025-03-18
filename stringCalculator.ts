@@ -9,7 +9,9 @@ export function add(numbers: string): number {
         numbers = numbers.replace(new RegExp(`\\${delimiter}`, 'g'), ',');
     }
 
+    numbers = numbers.replace(/\n/g, ',');
     const numArray = numbers.split(',').map(Number);
+
     numArray.forEach((num) => {
         if (num < 0) negatives.push(num);
     });
