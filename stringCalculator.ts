@@ -1,3 +1,4 @@
 export function add(numbers: string): number {
-    return 0; // To make the test pass
+    if (numbers === '') return 0;
+    return parseInt(numbers, 10);
 }
